@@ -1,0 +1,13 @@
+<app-card 
+[type]="cardType" 
+customClass="bg-light-grey">
+  <img 
+  ngSrc="assets/img/city.jpeg" width="200" height="200" />
+  <section>
+    <app-list-item *ngFor="let item of cities; let i = index"
+      [name]="item.name"
+      [id]="item.id"
+      [type]="cardType">
+    </app-list-item>
+  </section>
+</app-card>

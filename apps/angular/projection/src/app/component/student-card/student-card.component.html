@@ -1,0 +1,13 @@
+<app-card 
+[type]="cardType" 
+customClass="bg-light-green">
+  <img 
+  ngSrc="assets/img/student.webp" width="200" height="200" />
+  <section>
+    <app-list-item *ngFor="let item of students; let i = index"
+      [name]="item.firstname"
+      [id]="item.id"
+      [type]="cardType">
+    </app-list-item>
+  </section>
+</app-card>
