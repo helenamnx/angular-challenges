@@ -8,7 +8,6 @@ import { StudentStore } from '../../data-access/student.store';
 import { CardType } from '../../model/card.model';
 import { Student } from '../../model/student.model';
 import { CardComponent } from '../../ui/card/card.component';
-import { ListItemComponent } from '../../ui/list-item/list-item.component';
 import { CardButtonType } from '../../model/card-button.model';
 import { CardButtonComponent } from '../card-button/card-button.component';
 @Component({
@@ -16,13 +15,7 @@ import { CardButtonComponent } from '../card-button/card-button.component';
   templateUrl: './student-card.component.html',
   standalone: true,
   styleUrls: ['./student-card.component.css'],
-  imports: [
-    CardComponent,
-    NgOptimizedImage,
-    ListItemComponent,
-    NgFor,
-    CardButtonComponent,
-  ],
+  imports: [CardComponent, NgOptimizedImage, CardButtonComponent],
 })
 export class StudentCardComponent implements OnInit {
   students: Student[] = [];

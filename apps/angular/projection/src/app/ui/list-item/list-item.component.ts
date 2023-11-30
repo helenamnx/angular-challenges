@@ -6,14 +6,7 @@ import { CitiesStore } from '../../data-access/city.store';
 
 @Component({
   selector: 'app-list-item',
-  template: `
-    <div class="border border-grey-300 py-1 px-2 flex justify-between">
-      {{ name }}
-      <button (click)="delete(id)">
-        <img class="h-5" src="assets/svg/trash.svg" />
-      </button>
-    </div>
-  `,
+  templateUrl: './list-item.component.html',
   standalone: true,
 })
 export class ListItemComponent {

@@ -1,16 +1,9 @@
 <app-card
-[list]="teachers"
 [type]="cardType"
+[list]="teachers"
 customClass="bg-light-red">
 <img
 ngSrc="assets/img/teacher.png" width="200" height="200"/>
-<section>
-  @for (item of teachers; track item.firstname) {
-    <app-list-item [name]="item.firstname"
-                  [id]="item.id"
-                  [type]="cardType">
-    </app-list-item>
-  }
-  </section>
+
   <app-card-button [type]="cardButtonType"  (click)="addNewItem()" />
 </app-card>

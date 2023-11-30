@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import {
   FakeHttpService,
   randomCity,
@@ -7,7 +7,6 @@ import {
 import { CitiesStore } from '../../data-access/city.store';
 import { CardType } from '../../model/card.model';
 import { CardComponent } from '../../ui/card/card.component';
-import { ListItemComponent } from '../../ui/list-item/list-item.component';
 import { City } from '../../model/city.model';
 import { CardButtonComponent } from '../card-button/card-button.component';
 import { CardButtonType } from '../../model/card-button.model';
@@ -16,13 +15,7 @@ import { CardButtonType } from '../../model/card-button.model';
   templateUrl: './city-card.component.html',
   standalone: true,
   styleUrls: ['./city-card.component.css'],
-  imports: [
-    CardComponent,
-    NgOptimizedImage,
-    ListItemComponent,
-    NgFor,
-    CardButtonComponent,
-  ],
+  imports: [CardComponent, NgOptimizedImage, CardButtonComponent],
 })
 export class CityCardComponent implements OnInit {
   cities: City[] = [];

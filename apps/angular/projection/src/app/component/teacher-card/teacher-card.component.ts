@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import {
   FakeHttpService,
   randTeacher,
@@ -8,7 +8,6 @@ import { TeacherStore } from '../../data-access/teacher.store';
 import { CardType } from '../../model/card.model';
 import { Teacher } from '../../model/teacher.model';
 import { CardComponent } from '../../ui/card/card.component';
-import { ListItemComponent } from '../../ui/list-item/list-item.component';
 import { CardButtonType } from '../../model/card-button.model';
 import { CardButtonComponent } from '../card-button/card-button.component';
 
@@ -17,13 +16,7 @@ import { CardButtonComponent } from '../card-button/card-button.component';
   templateUrl: './teacher-card.component.html',
   styleUrls: ['./teacher-card.component.css'],
   standalone: true,
-  imports: [
-    CardComponent,
-    NgOptimizedImage,
-    ListItemComponent,
-    NgFor,
-    CardButtonComponent,
-  ],
+  imports: [CardComponent, NgOptimizedImage, CardButtonComponent],
 })
 export class TeacherCardComponent implements OnInit {
   teachers: Teacher[] = [];

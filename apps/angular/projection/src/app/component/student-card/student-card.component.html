@@ -1,15 +1,9 @@
 <app-card 
 [type]="cardType" 
+[list]="students"
 customClass="bg-light-green">
   <img 
   ngSrc="assets/img/student.webp" width="200" height="200" />
-  <section>
-    @for (item of students; track item.firstname) {
-      <app-list-item [name]="item.firstname"
-                    [id]="item.id"
-                    [type]="cardType">
-      </app-list-item>
-    }
-  </section>
+  
   <app-card-button [type]="cardButtonType"  (click)="addNewItem()" />
 </app-card>

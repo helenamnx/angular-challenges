@@ -1,17 +1,9 @@
 <app-card 
 [type]="cardType" 
+[list]="cities"
 customClass="bg-light-grey">
   <img 
   ngSrc="assets/img/city.jpeg" width="200" height="200" />
-  <section>
-    @for (item of cities; track item.name) {
-      <app-list-item [name]="item.name"
-                    [id]="item.id"
-                    [type]="cardType">
-      </app-list-item>
-    }
-    
-    
-  </section>
+
   <app-card-button [type]="cardButtonType"  (click)="addNewItem()" />
 </app-card>
